@@ -4,7 +4,7 @@ export const metadata = {
     keywords:'Latest News,News,news,hindi news,english news,sports news',
   
   }
-
+import Image from "next/image";
 import getTechnology from "@/lib/getTechnology"
 import Link  from 'next/link';
 export default async function Technology(){
@@ -25,7 +25,7 @@ export default async function Technology(){
         {newArr.map((result:any)=>(
                 <li key={result.source.title} className=' pb-2 border-cyan-200 border-b-[1px] '>
 
-                <img src={result.image} className='rounded'/>
+                <Image src={result.image} className='rounded' alt="News image" placeholder="blur"/>
                 <h1 className='text-[1.3rem] text-white  font-medium mt-2 '>{result.title}</h1>
                 <p className='font-extralight text-white mt-2 '>{result.description}</p>
                 <br/>

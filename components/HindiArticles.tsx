@@ -1,6 +1,8 @@
 import getNewsHindiResults from "@/lib/getNewsResult";
 
 import Link from 'next/link'
+import  Image  from 'next/image';
+
 export default  async function  HindiArticles(){
     const newsData: Promise<{ articles: Array<articles> }> = getNewsHindiResults();
     const results = await newsData;
@@ -14,7 +16,8 @@ const content=
         {articles.map((result:any)=>(
                 <li key={result.source.title} className=' pb-2 border-cyan-200 border-b-[1px] '>
 
-                <img src={result.image} className='rounded'/>
+<Image src={result.image} className='rounded' alt="News image" placeholder="blur"/>
+                
                 <h1 className='text-[1.3rem] text-white  font-medium mt-2 '>{result.title}</h1>
                 <p className='font-extralight text-white mt-2'>{result.description}</p>
 
