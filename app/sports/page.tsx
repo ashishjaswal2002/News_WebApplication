@@ -25,7 +25,7 @@ export default async function SportsNews(){
         <h1 className="text-cyan-400 text-2xl font-medium"> Sports News </h1>
         <ul className="p-2 flex flex-col gap-10">
           
-        { newArr.map((result:any)=>(
+        {newArr && newArr.map((result:any)=>(
                 <li key={result.source.title} className=' pb-2 border-cyan-200 border-b-[1px] '>
 
                 
