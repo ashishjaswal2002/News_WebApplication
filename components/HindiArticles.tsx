@@ -16,7 +16,7 @@ const content=
         {articles.map((result:any)=>(
                 <li key={result.source.title} className=' pb-2 border-cyan-200 border-b-[1px] '>
 
-<Image src={result.image} className='rounded' alt={result.title} placeholder="blur"/>
+<Image src={result.image} className='rounded' alt={result.title}  width={500} height={500} unoptimized/>
                 
                 <h1 className='text-[1.3rem] text-white  font-medium mt-2 '>{result.title}</h1>
                 <p className='font-extralight text-white mt-2'>{result.description}</p>

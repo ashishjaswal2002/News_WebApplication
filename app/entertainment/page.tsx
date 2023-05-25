@@ -1,11 +1,12 @@
 
-
 export const metadata = {
     title: 'Entertainment News',
     description: 'Entertainment News ',
     keywords:'Latest News,News,news,hindi news,english news,sports news',
-  
-  }
+    
+}
+
+
 
 import getEntertainmentNews from "@/lib/getEntertainment"
 import Image from "next/image";
@@ -29,7 +30,7 @@ export default async function EntertainmentPage(){
         {newArr.map((result:any)=>(
                 <li key={result.source.title} className=' pb-2 border-cyan-200 border-b-[1px] '>
 
-<Image src={result.image} className='rounded' alt={result.title} placeholder="blur"/>
+<Image src={result.image} className='rounded' alt={result.title} width={600} height={600} unoptimized />
               
                 <h1 className='text-[1.3rem] text-white  font-medium mt-2 '>{result.title}</h1>
                 <p className='font-extralight text-white mt-2 '>{result.description}</p>
