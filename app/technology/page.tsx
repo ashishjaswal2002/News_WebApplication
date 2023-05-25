@@ -22,7 +22,7 @@ export default async function Technology(){
 
         <h1 className="mt-2 text-2xl text-cyan-400 font-medium"> Tech News</h1>
         <ul className="p-2 flex flex-col gap-10">
-        {newArr.map((result:any)=>(
+        {newArr && newArr.map((result:any)=>(
                 <li key={result.source.title} className=' pb-2 border-cyan-200 border-b-[1px] '>
 
                 <Image src={result.image} className='rounded' alt={result.title} width={500} height={500} unoptimized />
