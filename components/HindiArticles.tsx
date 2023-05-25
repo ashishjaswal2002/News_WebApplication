@@ -13,6 +13,9 @@ const content=
         <h1 className="text-2xl ml-2 text-cyan-300 font-bold">Hindi News</h1>
         
         <ul className="p-2 flex flex-col gap-10">
+        {!articles && <div>
+                <h1>Not found</h1>
+            </div> }
         {articles && articles.map((result:any)=>(
                 <li key={result.source.title} className=' pb-2 border-cyan-200 border-b-[1px] '>
 

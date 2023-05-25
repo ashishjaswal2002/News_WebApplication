@@ -19,6 +19,9 @@ export default async function  EnglishArticles(){
        <section>
         
            <ul className="p-2 flex flex-col gap-10">
+           {!newArr && <div>
+                <h1>Not found</h1>
+            </div> }
         { newArr && newArr.map((result:any)=>(
                 <li key={result.source.title} className=' pb-2 border-cyan-200 border-b-[1px] '>
 
